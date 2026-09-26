@@ -1,0 +1,101 @@
+// Tailwind CSS theme configuration for MR BUENOS AIRES
+// Kept in its own file so the design tokens (colors, spacing, type scale) are easy to find and tweak.
+// Compiled locally into css/tailwind.css via `npm run build:css` (no external CDN dependency).
+module.exports = {
+    content: ["./index.html"],
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "tertiary": "#c6c6c7",
+                "surface-tint": "#ffb3b6",
+                "on-background": "#e2e2e2",
+                "on-tertiary-container": "#fbfbfb",
+                "surface-container-low": "#1b1b1b",
+                "on-error-container": "#ffdad6",
+                "primary": "#ffb3b6",
+                "surface-container-highest": "#353535",
+                "outline-variant": "#5c3f40",
+                "outline": "#ac8889",
+                "error-container": "#93000a",
+                "primary-fixed": "#ffdada",
+                "error": "#ffb4ab",
+                "on-error": "#690005",
+                "surface-variant": "#353535",
+                "on-secondary-fixed": "#261a00",
+                "inverse-primary": "#be0037",
+                "surface-container-lowest": "#0e0e0e",
+                "secondary": "#ffc640",
+                "on-tertiary-fixed": "#1a1c1c",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "primary-container": "#e11d48",
+                "on-tertiary-fixed-variant": "#454747",
+                "surface": "#131313",
+                "inverse-on-surface": "#303030",
+                "on-surface-variant": "#e5bdbe",
+                "on-surface": "#e2e2e2",
+                "surface-dim": "#131313",
+                "surface-bright": "#393939",
+                "on-primary-fixed-variant": "#920028",
+                "on-primary-container": "#fffaf9",
+                "inverse-surface": "#e2e2e2",
+                "on-primary-fixed": "#40000c",
+                "on-secondary": "#402d00",
+                "surface-container": "#1f1f1f",
+                "secondary-container": "#e3aa00",
+                "surface-container-high": "#2a2a2a",
+                "on-primary": "#68001a",
+                "tertiary-fixed": "#e2e2e2",
+                "primary-fixed-dim": "#ffb3b6",
+                "tertiary-container": "#727474",
+                "secondary-fixed": "#ffdf9f",
+                "background": "#131313",
+                "secondary-fixed-dim": "#f9bd22",
+                "on-tertiary": "#2f3131",
+                "on-secondary-fixed-variant": "#5c4300",
+                "on-secondary-container": "#5a4100"
+            },
+            borderRadius: {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            spacing: {
+                "md": "24px",
+                "margin-desktop": "40px",
+                "lg": "48px",
+                "sm": "16px",
+                "base": "4px",
+                "xs": "8px",
+                "xl": "80px",
+                "gutter": "20px",
+                "margin-mobile": "16px"
+            },
+            fontFamily: {
+                "headline-lg-mobile": ["Montserrat"],
+                "display-lg": ["Montserrat"],
+                "headline-md": ["Montserrat"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "label-bold": ["Inter"],
+                "headline-lg": ["Montserrat"],
+                "mono-spec": ["Inter"]
+            },
+            fontSize: {
+                "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                "mono-spec": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600" }]
+            }
+        },
+    },
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/container-queries"),
+    ],
+};

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MOTO-PRO PERFORMANCE | Potencia y Precisión</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind utilities, compiled locally from tailwind.config.js via `npm run build:css` (no external CDN dependency) -->
+<link href="css/tailwind.css" rel="stylesheet"/>
+<!-- Custom styles + replaceable background-image hooks -->
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+
+<!-- ==================== HEADER / NAV ==================== -->
+<header class="bg-surface docked full-width top-0 sticky z-50 border-b border-surface-container-highest">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-xs max-w-full mx-auto">
+<div class="flex items-center gap-4">
+<!-- Logo: replace images/logo.png to update the brand mark -->
+<img alt="MR BUENOS AIRES Logo" class="h-20 w-auto" src="images/logo.png"/>
+<span class="text-headline-md font-headline-md italic uppercase text-secondary-container dark:text-secondary-fixed hidden lg:block">Moto Repuestos BUENOS AIRES</span>
+</div>
+<div class="flex items-center gap-sm">
+    <!-- Toggle: opens the services cascade panel below -->
+    <div class="relative">
+        <button aria-controls="services-panel" aria-expanded="false" id="services-toggle"
+           class="border border-secondary-container text-secondary-container px-sm sm:px-md py-xs font-label-bold rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95 uppercase inline-flex items-center gap-xs">
+            <span class="material-symbols-outlined text-lg">design_services</span>
+            <span class="hidden sm:inline">Nuestros Servicios</span>
+            <span class="material-symbols-outlined text-lg transition-transform" id="services-chevron">expand_more</span>
+        </button>
+        <!-- Cascade panel: each service opens WhatsApp with a pre-filled message for that service -->
+        <div class="hidden absolute right-0 top-full mt-xs w-80 max-w-[90vw] max-h-[75vh] overflow-y-auto bg-surface-container border border-surface-container-highest rounded-lg shadow-2xl overflow-hidden z-50"
+             id="services-panel">
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20de%20lubricantes%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">oil_barrel</span>
+                <span class="font-label-bold text-sm uppercase">Lubricantes</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20de%20llantas%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">tire_repair</span>
+                <span class="font-label-bold text-sm uppercase">Llantas</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20de%20repuestos%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">inventory_2</span>
+                <span class="font-label-bold text-sm uppercase">Repuestos</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20servicio%20de%20taller%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">home_repair_service</span>
+                <span class="font-label-bold text-sm uppercase">Taller</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20necesito%20solicitar%20el%20servicio%20de%20gr%C3%BAa%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">local_shipping</span>
+                <span class="font-label-bold text-sm uppercase">Servicio de Grúa</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20gesti%C3%B3n%20del%20SOAT%20de%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">shield</span>
+                <span class="font-label-bold text-sm uppercase">Soat (Gestión)</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20gesti%C3%B3n%20de%20la%20revisi%C3%B3n%20t%C3%A9cnico-mec%C3%A1nica%20de%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">fact_check</span>
+                <span class="font-label-bold text-sm uppercase">Revisión Técnico Mecánica (Gestión)</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20servicio%20de%20pintura%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">format_paint</span>
+                <span class="font-label-bold text-sm uppercase">Pintura</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20una%20restauraci%C3%B3n%20y%20brillada%20de%20farolas%20para%20mi%20moto%20o%20carro."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">highlight</span>
+                <span class="font-label-bold text-sm uppercase">Restauración y Brillada de Farolas y Visores</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20servicio%20el%C3%A9ctrico%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">bolt</span>
+                <span class="font-label-bold text-sm uppercase">Servicio Eléctrico</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20lavado%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">local_car_wash</span>
+                <span class="font-label-bold text-sm uppercase">Lavadero de Motos</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20lavado%20para%20mi%20carro."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">local_car_wash</span>
+                <span class="font-label-bold text-sm uppercase">Lavadero de Carros</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20diagn%C3%B3stico%20con%20scanner%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">troubleshoot</span>
+                <span class="font-label-bold text-sm uppercase">Scanner</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20lavado%20de%20inyectores%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">water_drop</span>
+                <span class="font-label-bold text-sm uppercase">Lavado de Inyectores</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20servicio%20de%20montallantas%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">build_circle</span>
+                <span class="font-label-bold text-sm uppercase">Monta Llantas</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20una%20recarga%20de%20bater%C3%ADa%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">battery_charging_full</span>
+                <span class="font-label-bold text-sm uppercase">Recarga de Baterías</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm border-b border-surface-container-highest hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20agendar%20un%20servicio%20de%20soldadura%2C%20reconstrucci%C3%B3n%20o%20roscas%20para%20mi%20moto."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">construction</span>
+                <span class="font-label-bold text-sm uppercase">Soldadura, Reconstrucciones y Roscas</span>
+            </a>
+            <a class="flex items-center gap-md px-md py-sm hover:bg-surface-container-high transition-colors"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20de%20productos%20para%20el%20cuidado%20de%20mi%20moto%20o%20carro."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                <span class="font-label-bold text-sm uppercase">Productos para el Cuidado del Vehículo</span>
+            </a>
+        </div>
+    </div>
+    <!-- CTA: WhatsApp -->
+    <a class="bg-secondary-container text-on-secondary-container px-sm sm:px-md py-xs font-label-bold rounded-lg hover:bg-secondary transition-all active:scale-95 uppercase inline-block text-center"
+       href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.">
+        NUESTRO WHATSAPP
+    </a>
+</div>
+</nav>
+</header>
+
+<main>
+
+    <!-- ==================== INTRO / SPECIALTIES GRID ====================
+         Each card's photo is set in css/style.css (.card-bg-...). To go back to a plain
+         black card, just delete the background-image line for that class in the CSS —
+         no HTML changes needed. Titles and descriptions below are plain text, edit freely. -->
+    <section class="pt-16 pb-8 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div class="relative overflow-hidden border-l-4 border-primary-container clip-corner group">
+                <div class="card-bg-lubricantes absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent"></div>
+                <div class="relative z-10 p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform">oil_barrel</span>
+                    <h3 class="text-headline-sm font-headline-sm italic uppercase mb-2">Lubricantes</h3>
+                    <p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Lubricantes de las mejores marcas para tu vehiculo.</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden border-l-4 border-primary-container clip-corner group">
+                <div class="card-bg-llantas absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent"></div>
+                <div class="relative z-10 p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform">tire_repair</span>
+                    <h3 class="text-headline-sm font-headline-sm italic uppercase mb-2">Llantas</h3>
+                    <p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Llantas para todo tipo de moto y terreno.</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden border-l-4 border-primary-container clip-corner group">
+                <div class="card-bg-repuestos absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent"></div>
+                <div class="relative z-10 p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform">inventory_2</span>
+                    <h3 class="text-headline-sm font-headline-sm italic uppercase mb-2">Repuestos</h3>
+                    <p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Repuestos de primera calidad para tu moto.</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden border-l-4 border-primary-container clip-corner group">
+                <div class="card-bg-taller absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent"></div>
+                <div class="relative z-10 p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform">home_repair_service</span>
+                    <h3 class="text-headline-sm font-headline-sm italic uppercase mb-2">Taller</h3>
+                    <p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Mano de obra experta para el mantenimiento de tu moto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS PARA EL CUIDADO DEL VEHÍCULO (BANNER) ==================== -->
+    <section class="px-margin-desktop max-w-container-max mx-auto pb-8">
+        <div class="bg-primary-container rounded-lg px-lg py-md flex flex-col sm:flex-row items-center justify-between gap-md text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-md">
+                <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                <div>
+                    <h3 class="font-headline-md text-white uppercase">Productos para el cuidado del vehículo</h3>
+                    <p class="text-white/80 text-sm">Para tu moto o carro: brillo, protección y cuidado en cada detalle.</p>
+                </div>
+            </div>
+            <a class="bg-white text-primary-container font-label-bold px-lg py-xs rounded hover:brightness-95 transition-all uppercase inline-flex items-center gap-xs whitespace-nowrap"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20de%20productos%20para%20el%20cuidado%20de%20mi%20moto%20o%20carro."
+               target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">chat</span>
+                Cotizar
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== HERO ====================
+         Background photo: replace images/hero-background.jpg (see css/style.css) to update it. -->
+    <section class="relative min-h-[520px] sm:min-h-[600px] lg:min-h-[680px] flex items-center overflow-hidden" id="inicio">
+        <div class="absolute inset-0 z-0">
+            <div class="hero-background w-full h-full bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(225,29,72,0.15),transparent)]"></div>
+        </div>
+        <div class="relative z-10 px-margin-desktop max-w-4xl py-xl">
+            <div class="inline-block bg-primary-container text-white px-xs py-base font-mono-spec mb-md tracking-widest uppercase">
+                HORARIO 8:30 AM -- 8:00 PM (Lunes a Sabado)
+            </div>
+            <!-- Headline: edit this copy freely, it's plain text -->
+            <h1 class="text-headline-lg-mobile lg:text-display-lg font-headline-lg italic uppercase text-white mb-sm">
+                Todo en un Solo Lugar
+            </h1>
+            <p class="text-body-lg text-on-surface-variant max-w-xl mb-lg">
+                Repuestos originales, alto rendimiento y asesoría técnica experta en Moto Respuestos Buenos Aires.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-md">
+                <!-- CTA: WhatsApp -->
+                <a class="bg-secondary text-on-secondary-fixed font-label-bold px-xl py-md text-center rounded hover:brightness-110 transition-all uppercase flex items-center justify-center gap-xs"
+                   href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.">
+                    <span class="material-symbols-outlined">chat</span>
+                    CONTACTAR POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES BENTO GRID ==================== -->
+    <section class="py-xl px-margin-desktop bg-black technical-stripe" id="features">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="md:col-span-2 bg-surface-container-low precision-border p-lg flex flex-col justify-between">
+                <div>
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-md">verified</span>
+                    <h3 class="font-headline-lg text-white mb-sm">VARIEDAD TÉCNICA</h3>
+                    <p class="text-on-surface-variant font-body-md max-w-md">Disponemos de la selección más amplia de repuestos originales y de alto rendimiento para todas las marcas líderes del mercado racing.</p>
+                </div>
+                <div class="mt-lg flex gap-md border-t border-surface-container-highest pt-md">
+                    <div>
+                        <p class="text-primary-container font-headline-md leading-tight">5000+</p>
+                        <p class="text-xs font-label-bold uppercase text-tertiary">Piezas en Stock</p>
+                    </div>
+                    <div>
+                        <p class="text-primary-container font-headline-md leading-tight">24/7</p>
+                        <p class="text-xs font-label-bold uppercase text-tertiary">Soporte Técnico</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-primary-container p-lg flex flex-col justify-center items-center text-center">
+                <span class="material-symbols-outlined text-white text-6xl mb-md" style="font-variation-settings: 'FILL' 1;">speed</span>
+                <h3 class="font-headline-md text-white mb-sm uppercase">ENTREGA RÁPIDA</h3>
+                <p class="text-white/80 font-body-md">Logística optimizada para que tu moto no pierda ni un segundo en pista. Envíos nacionales en tiempo récord.</p>
+            </div>
+            <div class="bg-surface-container-low precision-border p-lg">
+                <span class="material-symbols-outlined text-primary text-4xl mb-md">precision_manufacturing</span>
+                <h3 class="font-headline-md text-white mb-sm uppercase">CALIDAD CERTIFICADA</h3>
+                <p class="text-on-surface-variant font-body-md">Cada pieza es sometida a rigurosas pruebas de estrés antes de entrar en nuestro catálogo oficial de rendimiento.</p>
+            </div>
+            <!-- Background photo: replace images/workshop-background.jpg (see css/style.css) to update it. -->
+            <div class="md:col-span-2 bg-surface-container-low precision-border overflow-hidden relative group">
+                <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
+                    <div class="workshop-background w-full h-full bg-cover bg-center"></div>
+                </div>
+                <div class="relative p-lg h-full flex flex-col justify-end bg-gradient-to-t from-black to-transparent">
+                    <h3 class="font-headline-lg text-white uppercase">INSTALACIÓN EXPERTA</h3>
+                    <p class="text-tertiary font-body-md">Asesoría personalizada para la compatibilidad exacta de tus componentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== UBICACIÓN ==================== -->
+    <section class="py-xl px-margin-desktop bg-surface-container-lowest" id="ubicacion">
+        <div class="flex items-center justify-center gap-md mb-lg max-w-container-max mx-auto">
+            <span class="h-px flex-1 bg-secondary-container/40"></span>
+            <h2 class="text-headline-md font-headline-md uppercase text-secondary-container text-center whitespace-nowrap">Estamos Ubicados</h2>
+            <span class="h-px flex-1 bg-secondary-container/40"></span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-container-max mx-auto items-start">
+            <div class="flex flex-col gap-lg">
+                <div class="flex items-start gap-md">
+                    <span class="material-symbols-outlined text-primary-container text-3xl">location_on</span>
+                    <div>
+                        <p class="font-label-bold uppercase text-secondary-container tracking-widest mb-1">Dirección</p>
+                        <p class="text-on-surface-variant">Calle 49 (Ayacucho) # 28 - 28<br/>Buenos Aires, Medellín, Antioquia</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-md">
+                    <span class="material-symbols-outlined text-primary-container text-3xl">schedule</span>
+                    <div>
+                        <p class="font-label-bold uppercase text-secondary-container tracking-widest mb-1">Horario</p>
+                        <p class="text-on-surface-variant">Lunes a Sábado<br/>8:30 am -- 8:00 pm</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-md">
+                    <span class="material-symbols-outlined text-primary-container text-3xl">call</span>
+                    <div>
+                        <p class="font-label-bold uppercase text-secondary-container tracking-widest mb-1">Teléfono Fijo</p>
+                        <p class="text-on-surface-variant">604 269 04 85</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-md">
+                    <span class="material-symbols-outlined text-primary-container text-3xl">chat</span>
+                    <div>
+                        <p class="font-label-bold uppercase text-secondary-container tracking-widest mb-1">Celular / WhatsApp</p>
+                        <p class="text-on-surface-variant">301 225 3737</p>
+                        <p class="text-on-surface-variant">301 294 11 60</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Map: search "MR Motos Buenos Aires" on Google Maps to update/replace this embed -->
+            <div class="border border-secondary-container/40 rounded-lg overflow-hidden h-[320px] md:h-full min-h-[320px]">
+                <iframe class="w-full h-full grayscale-[30%] contrast-125" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=MR%20Motos%20Buenos%20Aires%2C%20Av.%20Ayacucho%2C%20Medell%C3%ADn%2C%20Antioquia&output=embed"
+                    style="border:0;" title="Ubicación de MR Buenos Aires en Google Maps"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTÁCTANOS ==================== -->
+    <section class="py-xl px-margin-desktop bg-black technical-stripe" id="contacto">
+        <div class="flex items-center justify-center gap-md mb-sm max-w-container-max mx-auto">
+            <span class="h-px flex-1 bg-secondary-container/40"></span>
+            <h2 class="text-headline-md font-headline-md uppercase text-secondary-container text-center whitespace-nowrap">Contáctanos</h2>
+            <span class="h-px flex-1 bg-secondary-container/40"></span>
+        </div>
+        <p class="text-on-surface-variant text-center mb-lg">Estamos listos para ayudarte a encontrar lo que necesitas</p>
+        <div class="flex flex-col sm:flex-row gap-md justify-center items-center">
+            <a class="bg-secondary text-on-secondary-fixed font-label-bold px-xl py-md text-center rounded hover:brightness-110 transition-all uppercase inline-flex items-center justify-center gap-xs"
+               href="https://wa.me/573012253737?text=Hola%20MR%20Buenos%20Aires%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.">
+                <span class="material-symbols-outlined">chat</span>
+                WhatsApp &middot; 301 225 3737
+            </a>
+            <a class="border border-secondary-container text-secondary-container font-label-bold px-xl py-md text-center rounded hover:bg-secondary-container hover:text-on-secondary-container transition-all uppercase inline-flex items-center justify-center gap-xs"
+               href="tel:+2690485">
+                <span class="material-symbols-outlined">call</span>
+                Fijo &middot; 604 269 04 85
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-surface-container-lowest border-t border-surface-container-highest pt-lg pb-md px-margin-desktop text-center">
+    <img alt="MR BUENOS AIRES Logo" class="h-16 w-auto mx-auto mb-sm" src="images/logo.png"/>
+    <p class="text-on-surface-variant text-sm">&copy; 2026 Moto Repuestos Buenos Aires &middot; Medellín, Antioquia</p>
+    <p class="text-tertiary text-xs uppercase tracking-widest mt-1">Lubricantes &middot; Llantas &middot; Repuestos &middot; Taller</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
